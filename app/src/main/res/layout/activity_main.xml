@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+    <!-- Nome completo -->
+    <EditText
+        android:id="@+id/nomeCompletoTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nome Completo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:inputType="textPersonName" />
+
+    <!-- E-mail -->
+    <EditText
+        android:id="@+id/emailTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        app:layout_constraintTop_toBottomOf="@id/nomeCompletoTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="textEmailAddress" />
+
+    <!-- Opção para receber e-mails -->
+    <CheckBox
+        android:id="@+id/receberEmailsCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receber e-mails com atualizações de oportunidades"
+        app:layout_constraintTop_toBottomOf="@id/emailTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Telefone -->
+    <EditText
+        android:id="@+id/telefoneTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Telefone"
+        app:layout_constraintTop_toBottomOf="@id/receberEmailsCb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="phone" />
+
+    <!-- Telefone celular (condicional) -->
+    <CheckBox
+        android:id="@+id/adicionarCelularCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adicionar Telefone Celular"
+        app:layout_constraintTop_toBottomOf="@id/telefoneTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/celularTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Telefone Celular"
+        app:layout_constraintTop_toBottomOf="@id/adicionarCelularCb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="phone"
+        android:visibility="gone" />
+
+    <!-- Sexo -->
+    <Spinner
+        android:id="@+id/sexoSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Sexo"
+        app:layout_constraintTop_toBottomOf="@id/celularTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Data de Nascimento -->
+    <EditText
+        android:id="@+id/dataNascimentoTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Data de Nascimento"
+        app:layout_constraintTop_toBottomOf="@id/sexoSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="date" />
+
+    <!-- Formação -->
+    <Spinner
+        android:id="@+id/formacaoSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Formação"
+        app:layout_constraintTop_toBottomOf="@id/dataNascimentoTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Ano de Formatura (Fundamental e Médio) -->
+    <EditText
+        android:id="@+id/anoFormaturaTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Ano de Formatura Fundamental e Médio"
+        app:layout_constraintTop_toBottomOf="@id/formacaoSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="number" />
+
+    <!-- Ano de Conclusão (Graduação e Especialização) -->
+    <EditText
+        android:id="@+id/anoConclusaoTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:hint="Ano de Conclusão Graduação e Especialização"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formacaoSpinner" />
+
+    <!-- Instituição (Graduação e Especialização) -->
+    <EditText
+        android:id="@+id/instituicaoTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Instituição Graduação e Especialização"
+        app:layout_constraintTop_toBottomOf="@id/anoConclusaoTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Ano de Conclusão (Mestrado e Doutorado) -->
+    <EditText
+        android:id="@+id/anoConclusaoMestradoDoutoradoTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="188dp"
+        android:hint="Ano de Conclusão Mestrado e Doutorado"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formacaoSpinner" />
+
+    <!-- Instituição (Mestrado e Doutorado) -->
+    <EditText
+        android:id="@+id/instituicaoMestradoDoutoradoTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Instituição Mestrado e Doutorado"
+        app:layout_constraintTop_toBottomOf="@id/anoConclusaoMestradoDoutoradoTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Título de Monografia (Mestrado e Doutorado) -->
+    <EditText
+        android:id="@+id/tituloMonografiaTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Título de Monografia"
+        app:layout_constraintTop_toBottomOf="@id/instituicaoMestradoDoutoradoTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Orientador (Mestrado e Doutorado) -->
+    <EditText
+        android:id="@+id/orientadorTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Orientador"
+        app:layout_constraintTop_toBottomOf="@id/tituloMonografiaTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Vagas de interesse -->
+    <EditText
+        android:id="@+id/vagasInteresseTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Vagas de Interesse"
+        app:layout_constraintTop_toBottomOf="@id/orientadorTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:inputType="textMultiLine" />
+
+    <!-- Botões -->
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        app:layout_constraintTop_toBottomOf="@id/vagasInteresseTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        app:layout_constraintTop_toBottomOf="@id/btnSalvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
