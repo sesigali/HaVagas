@@ -92,6 +92,7 @@
         app:layout_constraintTop_toBottomOf="@id/celularTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:entries="@array/sexo"
         android:layout_marginTop="16dp" />
 
     <!-- Data de Nascimento -->
@@ -115,9 +116,10 @@
         app:layout_constraintTop_toBottomOf="@id/dataNascimentoTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:entries="@array/formcao"
         android:layout_marginTop="16dp" />
 
-    <!-- Ano de Formatura (Fundamental e Médio) -->
+    <!-- Ano de Formatura (Fundamental e medio) -->
     <EditText
         android:id="@+id/anoFormaturaTv"
         android:layout_width="0dp"
@@ -212,25 +214,32 @@
         android:inputType="textMultiLine" />
 
     <!-- Botões -->
-    <Button
-        android:id="@+id/btnSalvar"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/layoutBt"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Salvar"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/vagasInteresseTv"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp">
 
-    <Button
-        android:id="@+id/btnLimpar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Limpar"
-        app:layout_constraintTop_toBottomOf="@id/btnSalvar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+            <Button
+                android:id="@+id/btnSalvar"
+                android:text="Salvar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp" />
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:text="Limpar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="16dp" />
+    </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
