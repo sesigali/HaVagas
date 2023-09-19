@@ -10,7 +10,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:ignore="ExtraText">
 
     <!-- Nome completo -->
     <EditText
@@ -124,23 +125,23 @@
         android:id="@+id/anoFormaturaTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Ano de Formatura Fundamental e Médio"
-        app:layout_constraintTop_toBottomOf="@id/formacaoSpinner"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:hint="Ano de Conclusão"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:inputType="number" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formacaoSpinner" />
+
 
     <!-- Ano de Conclusão (Graduação e Especialização) -->
     <EditText
         android:id="@+id/anoConclusaoTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="4dp"
         android:hint="Ano de Conclusão Graduação e Especialização"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/formacaoSpinner" />
 
@@ -149,22 +150,21 @@
         android:id="@+id/instituicaoTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:hint="Instituição Graduação e Especialização"
-        app:layout_constraintTop_toBottomOf="@id/anoConclusaoTv"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anoFormaturaTv" />
 
     <!-- Ano de Conclusão (Mestrado e Doutorado) -->
     <EditText
         android:id="@+id/anoConclusaoMestradoDoutoradoTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:hint="Ano de Conclusão Mestrado e Doutorado"
+        android:layout_marginTop="40dp"
+        android:hint="Ano de Conclusão Mestrado ou Doutorado"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/formacaoSpinner" />
 
@@ -173,11 +173,12 @@
         android:id="@+id/instituicaoMestradoDoutoradoTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Instituição Mestrado e Doutorado"
-        app:layout_constraintTop_toBottomOf="@id/anoConclusaoMestradoDoutoradoTv"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="4dp"
+        android:hint="Instituição Mestrado ou Doutorado"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/anoConclusaoMestradoDoutoradoTv" />
 
     <!-- Título de Monografia (Mestrado e Doutorado) -->
     <EditText
@@ -206,12 +207,19 @@
         android:id="@+id/vagasInteresseTv"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
         android:hint="Vagas de Interesse"
-        app:layout_constraintTop_toBottomOf="@id/orientadorTv"
-        app:layout_constraintStart_toStartOf="parent"
+        android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:inputType="textMultiLine" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orientadorTv" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 
     <!-- Botões -->
     <LinearLayout
